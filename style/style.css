@@ -6,14 +6,20 @@ padding: 0;
 box-sizing: border-box;
 }
 
+:root{
+    --preto-cor-de-fundo:  #040D12;
+    --verde-cabecalho: #183D3D;
+    --branco-texto-cabecalho: #f6f6f6;
+    --verde-texto-principal: #93B1A6;
+}
 body {
     height: 100vh;
-    background-color: #040D12;
-    color: #93B1A6;
+    background-color: var(--preto-cor-de-fundo);
+    color: var(--verde-texto-principal);
 }
 
 .cabecalho {
-    background-color: #183D3D;
+    background-color: var(--verde-cabecalho);
 }
 
 .cabecalho__menu {
@@ -27,10 +33,10 @@ body {
     margin-right: 20px;
     font-size: 1.5rem;
     font-weight: 500;
-    color: #f6f6f6;
-    border: 10px solid #183D3D;
+    color: var(--branco-texto-cabecalho);
+    border: 10px solid var(--verde-cabecalho);
     padding: 5px 10px;
-    background-color: #183D3D ;
+    background-color: var(--verde-cabecalho) ;
     text-decoration: none;
 }
 
@@ -69,21 +75,21 @@ body {
 
 
 .cabecalho__menu__link:hover {
-    color: #040D12 ;
+    color: var(--preto-cor-de-fundo);
 }
 
 
 .rodape {
     padding: 12px;
-    color: #f6f6f6;
-    background-color: #183D3D;
+    color: var(--branco-texto-cabecalho);
+    background-color: var(--verde-cabecalho);
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     font-size: 1rem;
     font-weight: 400;
 }
 @media only screen and (max-width: 767px) {
-    /* Estilos para smartphones */
+    
     .cabecalho__menu__link {
         font-size: 1.2rem;
         margin-right: 15px;
