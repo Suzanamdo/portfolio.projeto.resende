@@ -68,13 +68,35 @@ body {
 
 }
 
-.apresentacao__imagem {
+/*.apresentacao__imagem {
     width: 100%;
    height: auto;
     margin-left: 0;
   
+} */
+
+.gallery {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.image {
+  margin: 10px;
+  width: calc(33.33% - 20px);
+  overflow: hidden;
 }
 
+.image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+.image:hover img {
+  transform: scale(1.1);
+}
 
 .cabecalho__menu__link:hover {
     color: var(--preto-cor-de-fundo);
@@ -115,4 +137,15 @@ body {
         font-size: 0.8rem;
         margin: 20px;
     }
+}
+@media screen and (max-width: 768px) {
+  .image {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image {
+    width: 100%;
+  }
 }
